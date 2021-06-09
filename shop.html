@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<style>
+    .similarity_shop {
+        display: flex;
+    }
+
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    .item {
+        margin: 5px;
+        width: 200px;
+        height: 300px;
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .total::after {
+        content: "$";
+    }
+
+    #cart {
+        overflow: scroll;
+        width: 200px;
+        height: 300px;
+    }
+</style>
+
+<body>
+    <nav>
+        <a href="index.html">На главную</a>
+    </nav>
+    <h1>Корзина</h1>
+    <div class="similarity_shop">
+        <div class="item" onclick="Cart.AddToCart(ItemsNomenclature.Item1);">Товар 1</div>
+        <div class="item" onclick="Cart.AddToCart(ItemsNomenclature.Item2);">Товар 2</div>
+        <div class="item" onclick="Cart.AddToCart(ItemsNomenclature.Item3);"">Товар 3</div>
+        <div id="cart">Товары в корзине:<br></div>
+    </div>
+    <p class="total">Итог: <span id="ex2_answer">0</span> </p>
+    <button onclick="Cart.ClearCart();">Отчистить корзину</button>
+    <script src="shop.js"></script>
+</body>
+
+</html>
